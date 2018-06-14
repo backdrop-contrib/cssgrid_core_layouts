@@ -1,0 +1,26 @@
+@supports (display: grid) {
+  @media (min-width: 48em) {
+    .l-halves {
+      display: grid;
+      /* Calc rem value is calculated by 1.875rem * $amt-of-gutters / $amt-of-columns */
+      grid-template-columns: calc(50% - 0.9375rem) calc(50% - 0.9375rem);
+      grid-gap: 1.875rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .l-halves:after {
+      display: none;
+    }
+
+    .l-halves-region {
+      -webkit-box-flex: 0;
+      -ms-flex: none;
+      flex: none;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+
+  }
+}

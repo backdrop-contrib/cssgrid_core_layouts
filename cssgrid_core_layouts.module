@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * Implements hook_alter_css().
+ */
+// function cssgrid_layouts_css_alter(&$css) {
+//   kpr($css);
+// }
+
+/**
+ * Implements template_preprocess_layout().
+ */
+function cssgrid_layouts_preprocess_layout(&$variables) {
+  $cssgrid_layouts_path = backdrop_get_path('module', 'cssgrid_layouts');
+  $current_layout = $variables['layout']->layout_template;
+
+  if (file_exists($cssgrid_layouts_path . '/css/' . $current_layout . '.css')) {
+    backdrop_add_css($cssgrid_layouts_path . '/css/' . $current_layout . '.css');
+  }
+}

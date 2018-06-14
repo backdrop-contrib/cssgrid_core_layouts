@@ -1,0 +1,23 @@
+@supports (display: grid) {
+  @media (min-width: 48em) {
+    .l-thirds {
+      display: grid;
+      /* Calc rem value is calculated by 1.875rem * $amt-of-gutters / $amt-of-columns */
+      grid-template-columns: repeat(3, calc(33.333333% - 1.25rem));
+      grid-gap: 1.875rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .l-thirds:after {
+      display: none;
+    }
+
+    .l-thirds-region {
+      flex: none;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: 100%;
+    }
+  }
+}

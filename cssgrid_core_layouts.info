@@ -1,0 +1,5 @@
+name = CSS Grid for Core's Layouts
+description = Overrides core's layout CSS so multicolumn parts are using CSS Grid.
+package = Layout
+backdrop = 1.x
+type = module
