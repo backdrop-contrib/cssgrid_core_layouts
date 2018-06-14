@@ -14,6 +14,14 @@ To learn how CSS Grid works, I recommend:
 * https://gridbyexample.com
 * https://css-tricks.com/snippets/css/complete-guide-grid/
 
+### Can I use this in production?
+
+Yes, probably?
+
+But don't feel like you have to use CSS Grid because it's new. Bootstrap's flexbox based grid (what Backdrop core has) is great for most sites. Since this module trying to be compatible with core and Bootstrap grids, it's not an idea implementation of CSS Grid, it's a 'funsies implementation'.
+
+That said, if you find it useful, go for it! I'm 80% sure it's prod ready CSS
+
 License
 -------
 
